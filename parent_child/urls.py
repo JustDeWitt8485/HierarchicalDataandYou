@@ -20,5 +20,6 @@ from folder_file import views
 
 urlpatterns = [
     path('', views.IndexView.as_view(), name='homepage'),
+    path('addfile/', views.AddFile.as_view(), name='addfile'),
     path('admin/', admin.site.urls),
 ]

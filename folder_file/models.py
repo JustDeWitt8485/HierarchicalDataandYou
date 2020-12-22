@@ -10,7 +10,7 @@ class File(MPTTModel):
         on_delete=models.CASCADE,
         blank=True,
         null=True,
-        related_name='kids',
+        related_name='children',
     )
 
     class MPTTMeta:
