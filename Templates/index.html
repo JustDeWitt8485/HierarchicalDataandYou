@@ -1,0 +1,28 @@
+{% load mptt_tags %}
+
+<h1>Files</h1>
+
+<ul class="root">
+    {% recursetree files %}
+        <li>
+            {{ node.name }}
+            {% if not node.is_leaf_node %}
+                <ul class="children">
+                    {{ children }}
+        <hr>
+                </ul>
+            {% endif %}
+        </li>
+    {% endrecursetree %}
+</ul>
+
+{% comment %} {% for file in files %}
+<ul>
+    <li>
+        <h3>{{file}}</h3>
+    </li>
+
+
+</ul>
+{% endfor %}
+    <hr> {% endcomment %}
